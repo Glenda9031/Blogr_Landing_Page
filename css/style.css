@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --light-red-CTA-text:                     hsl(356, 100%, 66%);
+    --very-light-red-CTA-hover-bg:            hsl(355, 100%, 74%);
+    --very-dark-blue-headings:                hsl(208, 49%, 24%);
+
+    --white-text:                             hsl(0, 0%, 100%);
+    --grayish-blue-footer-text:               hsl(240, 2%, 79%);
+    --very-dark-grayish-blue-body-copy:       hsl(207, 13%, 34%);
+    --very-dark-black-blue-footer-background: hsl(240, 10%, 16%);
+
+    --very-light-red-bgg-CTA:                 hsl(13, 100%, 72%);
+    --light-red-bgg-CTA:                      hsl(353, 100%, 62%);
+
+    --very-dark-gray-blue-bggb:               hsl(237, 17%, 21%);
+    --very-dark-desaturated-blue-bggb:        hsl(237, 23%, 32%);
+}
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--very-dark-grayish-blue-body-copy);     
+ }
