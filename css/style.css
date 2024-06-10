@@ -1,21 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-:root {
-    --light-red-CTA-text:                     hsl(356, 100%, 66%);
-    --very-light-red-CTA-hover-bg:            hsl(355, 100%, 74%);
-    --very-dark-blue-headings:                hsl(208, 49%, 24%);
-
-    --white-text:                             hsl(0, 0%, 100%);
-    --grayish-blue-footer-text:               hsl(240, 2%, 79%);
-    --very-dark-grayish-blue-body-copy:       hsl(207, 13%, 34%);
-    --very-dark-black-blue-footer-background: hsl(240, 10%, 16%);
-
-    --very-light-red-bgg-CTA:                 hsl(13, 100%, 72%);
-    --light-red-bgg-CTA:                      hsl(353, 100%, 62%);
-
-    --very-dark-gray-blue-bggb:               hsl(237, 17%, 21%);
-    --very-dark-desaturated-blue-bggb:        hsl(237, 23%, 32%);
+:root{
+    --body-bg:      hsl(0, 0%, 98%);
+    --hr-bg:        hsl(0, 0%, 90%);
+    --cta-text:     hsl(356, 100%, 66%);
+    --cta-hover-bg: hsl(355, 100%, 74%);
+    --headings:     hsl(208, 49%, 24%);
+    --text:         hsl(0, 0%, 100%);
+    --footer-text:  hsl(240, 2%, 79%);
+    --body-copy:    hsl(207, 13%, 34%);
+    --footer-bg:    hsl(240, 10%, 16%);
 }
 
 /* Reset */
@@ -28,11 +23,100 @@
     box-sizing: border-box;
 }
 
+.align-content {
+    --min: 0;
+    --max: 90rem;
+    display: grid;
+    grid-template-columns: minmax(var(--min), 1fr, minmax(320px, var(--max)) minmax(var(--min)), 1fr);
+}
+
+.align-content > * {
+    grid-column: 2;
+}
+
+h1, h2, h3 {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+}
+    
+
  body {
+    background:  var(--body-bg);
+    font-size:   1rem;
     font-family: 'Ubuntu', sans-serif;
-    font-size:   15px;
-    line-height: 1.6;
-    color:       var(--very-dark-grayish-blue-body-copy);     
+    text-align:  center;     
  }
+
+ /* Header */
+
+ header {
+    background: url(./images/bg-pattern-intro-mobile.svg) no-repeat, linear-gradient(135deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-position: 34% 33%;
+    border-bottom-left-radius: 6rem;
+ }
+
+ /* Navigation */
+
+ header nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 3.5rem 1.5rem;
+ }
+
+.nav__logo {
+    max-width: 5rem;
+}
+
+.nav-links {
+    position: absolute;
+    top: 7.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: var(--headings);
+    background: var(--text);
+    width: calc(100% - 3rem);
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+    border-radius: .3rem;
+    box-shadow: 0 .625rem .625rem 0 rgba(0, 0, 0, .15);
+    padding: 2rem 1.5rem;
+    -webkit-transform: translateX(calc(-100% - 3rem));
+    -moz-transform: translateX(calc(-100% - 3rem));
+    -ms-transform: translateX(calc(-100% - 3rem));
+    -o-transform: translateX(calc(-100% - 3rem));
+    transform: translateX(calc(-100% - 3rem));
+    -webkit-transform: translateX(calc(-100% - 3rem));
+    -moz-transform: translateX(calc(-100% - 3rem));
+    -ms-transform: translateX(calc(-100% - 3rem));
+    -o-transform: translateX(calc(-100% - 3rem));
+    transition: all .2s linear;
+    z-index: 10;
+}
+
+.nav.active .nav-links {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.nav-links .nav__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav__list li {
+    cursor: pointer;
+}
+
+
+
 
  
