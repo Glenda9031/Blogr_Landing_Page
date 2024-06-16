@@ -50,7 +50,7 @@ h1, h2, h3 {
  /* Header */
 
  header {
-    background: url(./images/bg-pattern-intro-mobile.svg) no-repeat, linear-gradient(135deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background: url(../images/bg-pattern-intro-mobile.svg) no-repeat, linear-gradient(135deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     background-position: 34% 33%;
     border-bottom-left-radius: 6rem;
  }
@@ -447,6 +447,90 @@ main .state {
 
 /* Features */
 
+main .feature {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem 1.5rem 5rem 1.5rem;
+}
 
+.feature__img picture {
+    margin: 0 auto;
+}
+/* Footer */
 
+footer {
+    color: var(--footer-text);
+    background: var(--footer-bg);
+    border-top-right-radius: 6rem;
+    padding: 5rem 1.5rem 1rem 1.5rem;
+}
 
+.footer__grid {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.footer__grid--logo,
+.footer__grid--section h4 {
+    margin-bottom: 1.5rem;
+}
+
+.footer__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.footer__list li a {
+    color: var(--footer-text);
+    text-decoration: none;
+}
+
+/* Media Queries */
+
+@media (min-width: 47.5rem) {
+    header nav {
+        padding: 3.5rem 3rem;
+    }
+    .nav-links {
+        max-width: 28.125rem;
+        -webkit-transform: translateX(-200%);
+        -moz-transform: translateX(-200%);
+        -ms-transform: translateX(-200%);
+        -o-transform: translateX(-200%);
+        transform: translateX(-200%);
+    }
+
+    .intro__flex--img picture img,
+    .feature__img picture.
+    .feature__img picture img {
+        width: 100%;
+    }
+
+    main .intro,
+    main .feature {
+        padding: 5.5rem 3rem;
+    }
+
+    main .state {
+        margin-top: 26.25rem;
+        padding: 0 3rem 6.5rem 3rem;
+    }
+
+    .state__img img {
+        max-width: 42rem;
+        max-height: 42rem;
+        margin-top: auto;
+        margin-bottom: --4.0625rem;
+    }
+
+    footer {
+        padding: 5rem 3rem 2.5rem 3rem;
+    }
+
+    .footer__grid {
+        grid-template-columns: repeat(4, auto);
+    }
+}
